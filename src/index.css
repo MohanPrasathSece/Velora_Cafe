@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Velora Café Premium Design System - Brown & Coffee */
+    --background: 0 0% 100%;
+    --foreground: 25 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 25 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 30% 15%;
+
+    /* Rich brown primary accent - much lighter */
+    --primary: 25 40% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Warm cream secondary */
+    --secondary: 40 30% 90%;
+    --secondary-foreground: 25 30% 15%;
+
+    /* Light sage muted */
+    --muted: 25 15% 96%;
+    --muted-foreground: 25 15% 40%;
+
+    /* Warm coffee accent - lighter */
+    --accent: 30 40% 60%;
+    --accent-foreground: 25 30% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 25 15% 88%;
+    --input: 25 15% 90%;
+    --ring: 25 40% 55%;
+
+    --radius: 0.75rem;
+
+    /* Premium custom tokens - much lighter browns */
+    --brown: 25 40% 55%;
+    --brown-light: 25 35% 65%;
+    --brown-dark: 25 45% 45%;
+    --coffee: 30 35% 70%;
+    --coffee-light: 30 30% 80%;
+    --cream: 40 30% 96%;
+    --sage: 25 15% 85%;
+    
+    /* Gradients - much lighter */
+    --gradient-brown: linear-gradient(135deg, hsl(25 40% 55%) 0%, hsl(25 45% 45%) 100%);
+    --gradient-coffee: linear-gradient(135deg, hsl(30 35% 70%) 0%, hsl(30 30% 80%) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(40 30% 96%) 0%, hsl(0 0% 100%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(25 40% 55% / 0.15) 0%, hsl(30 35% 70% / 0.1) 100%);
+    
+    /* Shadows - much lighter */
+    --shadow-premium: 0 8px 32px -8px hsl(25 40% 55% / 0.15);
+    --shadow-soft: 0 4px 16px -4px hsl(25 30% 15% / 0.1);
+    --shadow-card: 0 2px 8px hsl(25 30% 15% / 0.08);
+    --shadow-glow: 0 0 24px hsl(30 35% 70% / 0.3);
+    
+    /* Transitions */
+    --transition-premium: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s ease-in-out;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 25 20% 8%;
+    --foreground: 40 30% 96%;
+
+    --card: 25 20% 10%;
+    --card-foreground: 40 30% 96%;
+
+    --popover: 25 20% 10%;
+    --popover-foreground: 40 30% 96%;
+
+    --primary: 340 60% 75%;
+    --primary-foreground: 25 20% 10%;
+
+    --secondary: 30 20% 18%;
+    --secondary-foreground: 40 30% 96%;
+
+    --muted: 30 20% 15%;
+    --muted-foreground: 30 15% 60%;
+
+    --accent: 30 30% 25%;
+    --accent-foreground: 40 30% 96%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 40 30% 96%;
+
+    --border: 30 20% 18%;
+    --input: 30 20% 18%;
+    --ring: 340 60% 75%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-brown {
+    background: var(--gradient-brown);
+  }
+  
+  .gradient-coffee {
+    background: var(--gradient-coffee);
+  }
+  
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .shadow-premium {
+    box-shadow: var(--shadow-premium);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .transition-premium {
+    transition: var(--transition-premium);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .text-brown {
+    color: hsl(var(--brown));
+  }
+  
+  .text-coffee {
+    color: hsl(var(--coffee));
+  }
+  
+  .bg-brown {
+    background-color: hsl(var(--brown));
+  }
+  
+  .bg-coffee {
+    background-color: hsl(var(--coffee));
+  }
+  
+  .border-brown {
+    border-color: hsl(var(--brown));
+  }
+  
+  .border-coffee {
+    border-color: hsl(var(--coffee));
+  }
+  
+  .hover-lift {
+    @apply transition-premium hover:-translate-y-1 hover:shadow-premium;
+  }
+  
+  .hover-glow {
+    @apply transition-premium hover:shadow-glow;
+  }
+}
