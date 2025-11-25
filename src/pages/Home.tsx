@@ -9,7 +9,8 @@ const Home = () => {
   // Background images to rotate
   const backgroundImages = [
     "/images/cafe/kris-atomic-3b2tADGAWnU-unsplash.jpg",
-    "/images/cafe/pexels-leeloothefirst-4678923.jpg"
+    "/images/cafe/pexels-leeloothefirst-4678923.jpg",
+    "/images/cafe/Gemini_Generated_Image_owf0cowf0cowf0co.jpg"
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
