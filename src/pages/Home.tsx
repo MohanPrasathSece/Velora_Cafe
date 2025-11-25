@@ -20,17 +20,17 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-brown/30 via-black/20 to-brown-dark/40" />
         </div>
 
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        <div className="relative z-10 text-center px-4 md:px-6 max-w-4xl mx-auto">
           <div className="inline-block mb-6 px-6 py-2 bg-white/95 backdrop-blur-sm rounded-lg border-2 border-brown/30 animate-fade-in shadow-soft">
-            <p className="text-sm font-medium text-brown flex items-center gap-2">
+            <p className="text-xs md:text-sm font-medium text-brown flex items-center gap-2">
               <Sparkles className="w-4 h-4" />
               Premium Coffee Experience
             </p>
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-6 text-white animate-fade-in leading-tight drop-shadow-2xl">
+          <h1 className="text-3xl md:text-7xl lg:text-8xl font-serif font-bold mb-6 text-white animate-fade-in leading-tight drop-shadow-2xl">
             Where Luxury Meets Flavor
           </h1>
-          <p className="text-xl md:text-2xl text-white/95 mb-10 animate-fade-in max-w-2xl mx-auto drop-shadow-lg">
+          <p className="text-base md:text-2xl text-white/95 mb-10 animate-fade-in max-w-2xl mx-auto drop-shadow-lg">
             Experience the finest selection of specialty coffee and artisanal pastries in an atmosphere of refined elegance
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
