@@ -5,24 +5,21 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-medium transition-premium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 font-sans",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium transition-normal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 font-sans",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-soft hover:shadow-premium",
+        default: "bg-brown text-white hover:bg-brown-dark shadow-soft hover:shadow-hover",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border-2 border-border bg-background hover:bg-muted hover:border-primary transition-smooth",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-muted hover:text-foreground transition-smooth",
-        link: "text-primary underline-offset-4 hover:underline",
-        premium: "gradient-emerald text-white shadow-soft hover:shadow-premium font-semibold tracking-wide",
-        luxury: "gradient-gold text-foreground shadow-soft hover:shadow-glow font-semibold tracking-wide",
-        hero: "bg-background/95 text-foreground border-2 border-emerald hover:bg-emerald hover:text-white shadow-soft backdrop-blur-sm transition-premium hover:-translate-y-0.5",
+        outline: "border-2 border-brown bg-white hover:bg-brown-lighter transition-normal",
+        secondary: "bg-brown-lighter text-brown hover:bg-brown-lighter/80",
+        ghost: "hover:bg-brown-lighter hover:text-brown transition-normal",
+        link: "text-brown underline-offset-4 hover:underline",
       },
       size: {
         default: "h-11 px-6 py-2",
         sm: "h-9 rounded-lg px-4 text-xs",
-        lg: "h-14 rounded-xl px-10 text-base",
+        lg: "h-14 rounded-lg px-10 text-base",
         icon: "h-11 w-11",
       },
     },
@@ -35,7 +32,7 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+  VariantProps<typeof buttonVariants> {
   asChild?: boolean;
 }
 

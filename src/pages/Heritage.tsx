@@ -9,7 +9,7 @@ const Heritage = () => {
         <div className="container mx-auto px-6 relative">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-coffee font-medium mb-4 tracking-wider uppercase text-sm animate-fade-in">Discover</p>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-8 animate-fade-in">Our Heritage</h1>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-8 animate-fade-in">Our Story</h1>
             <div className="w-24 h-1 gradient-brown mx-auto rounded-full mb-10 animate-fade-in" />
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed animate-fade-in">
               A journey of passion, craftsmanship, and the pursuit of coffee perfection
@@ -38,20 +38,22 @@ const Heritage = () => {
                 </p>
               </div>
             </div>
-            <div className="order-1 lg:order-2 rounded-2xl overflow-hidden shadow-premium hover-lift">
+            <div className="order-1 lg:order-2 rounded-2xl overflow-hidden shadow-premium hover-lift h-64 lg:h-80">
               <img
-                src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&h=600&fit=crop&auto=format"
+                src="/images/cafe/pexels-mehmet-34885414.jpg"
                 alt="Luxury café interior with comfortable beige seating and elegant design"
+                loading="lazy"
                 className="w-full h-full object-cover hover:scale-105 transition-premium duration-700"
               />
             </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="rounded-2xl overflow-hidden shadow-premium hover-lift">
+            <div className="rounded-2xl overflow-hidden shadow-premium hover-lift h-64 lg:h-80">
               <img
-                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&h=600&fit=crop&auto=format"
+                src="/images/food/velora_latte.jpg"
                 alt="Premium espresso being poured into white cup with artistic precision"
+                loading="lazy"
                 className="w-full h-full object-cover hover:scale-105 transition-premium duration-700"
               />
             </div>

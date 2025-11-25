@@ -1,134 +1,220 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Heart, Camera, MapPin, Coffee, Cake, Utensils, Wine } from "lucide-react";
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [likedImages, setLikedImages] = useState<number[]>([]);
+  const galleryRef = useRef<HTMLDivElement>(null);
 
   const categories = [
     { id: "all", name: "All Photos", icon: Camera },
-    { id: "interior", name: "Interior", icon: Coffee },
     { id: "food", name: "Food & Drinks", icon: Utensils },
     { id: "desserts", name: "Desserts", icon: Cake },
+    { id: "interior", name: "Interior", icon: Coffee },
     { id: "ambience", name: "Ambience", icon: Wine },
     { id: "spots", name: "Photo Spots", icon: MapPin },
   ];
 
   const galleryImages = [
+    // Food & Drinks (5 images) - Strictly Close-ups of Drinks/Food
     {
       id: 1,
-      category: "interior",
-      title: "Cozy Corner",
-      description: "Perfect spot for morning coffee",
-      url: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&h=600&fit=crop&auto=format",
+      category: "food",
+      title: "Latte Art Close-up",
+      description: "Perfectly poured rosetta",
+      url: "/images/food/velora_latte.jpg",
     },
     {
       id: 2,
       category: "food",
-      title: "Artisan Coffee",
-      description: "Freshly brewed specialty coffee",
-      url: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&h=600&fit=crop&auto=format",
+      title: "Iced Coffee Detail",
+      description: "Refreshing cold brew with ice",
+      url: "/images/food/speciality_drinks.jpg",
     },
     {
       id: 3,
-      category: "spots",
-      title: "Instagram Wall",
-      description: "Our famous floral wall backdrop",
-      url: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=800&h=600&fit=crop&auto=format",
+      category: "food",
+      title: "Espresso Shot",
+      description: "Rich crema and bold flavor",
+      url: "/images/food/signature_latte.jpg",
     },
     {
       id: 4,
-      category: "desserts",
-      title: "Chocolate Delight",
-      description: "Handcrafted chocolate cake",
-      url: "https://images.unsplash.com/photo-1559363317-0a948bb3e713?w=800&h=600&fit=crop&auto=format",
+      category: "food",
+      title: "Pour Over Brewing",
+      description: "Manual brewing process",
+      url: "/images/food/flat_white.jpg",
     },
     {
       id: 5,
-      category: "ambience",
-      title: "Golden Hour",
-      description: "Beautiful evening lighting",
-      url: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&h=600&fit=crop&auto=format",
+      category: "food",
+      title: "Cappuccino",
+      description: "Fresh and creamy",
+      url: "/images/food/capucina.jpg",
     },
+
+    // Desserts (5 images) - Strictly Close-ups of Sweets
     {
       id: 6,
-      category: "interior",
-      title: "Rustic Charm",
-      description: "Wood accents and warm lighting",
-      url: "https://images.unsplash.com/photo-1534751512449-277aff5c16e2?w=800&h=600&fit=crop&auto=format",
+      category: "desserts",
+      title: "Chocolate Cake Slice",
+      description: "Decadent layers of chocolate",
+      url: "/images/food/choco_lava.jpg",
     },
     {
       id: 7,
-      category: "food",
-      title: "Gourmet Sandwich",
-      description: "Fresh ingredients, perfect taste",
-      url: "https://images.unsplash.com/photo-1555507031-1e8e629d985b?w=800&h=600&fit=crop&auto=format",
+      category: "desserts",
+      title: "Macarons Box",
+      description: "Colorful sweet treats",
+      url: "/images/food/pexels-soc-nang-d-ng-2150345854-34810078.jpg",
     },
     {
       id: 8,
-      category: "spots",
-      title: "Garden Seating",
-      description: "Outdoor dining experience",
-      url: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&h=600&fit=crop&auto=format",
+      category: "desserts",
+      title: "Tiramisu Plate",
+      description: "Classic Italian dessert",
+      url: "/images/food/pexels-zeynep-merve-kilic-cakir-76946886-34889845.jpg",
     },
     {
       id: 9,
       category: "desserts",
-      title: "Macaron Tower",
-      description: "Colorful French macarons",
-      url: "https://images.unsplash.com/photo-1569864358642-9d1684040f43?w=800&h=600&fit=crop&auto=format",
+      title: "Cheesecake",
+      description: "Creamy and smooth",
+      url: "/images/food/cheecake.jpg",
     },
     {
       id: 10,
-      category: "ambience",
-      title: "Candle Light",
-      description: "Romantic dinner setting",
-      url: "https://images.unsplash.com/photo-1586987288744-e2ff08a6a4e2?w=800&h=600&fit=crop&auto=format",
+      category: "desserts",
+      title: "Fruit Tart",
+      description: "Fresh seasonal fruits",
+      url: "/images/food/cinnamon.jpg",
     },
+
+    // Interior (5 images) - Wide Shots of Space, Furniture
     {
       id: 11,
       category: "interior",
-      title: "Coffee Bar",
-      description: "Watch our baristas at work",
-      url: "https://images.unsplash.com/photo-1572442388296-2a2d9a9333a8?w=800&h=600&fit=crop&auto=format",
+      title: "Main Seating Hall",
+      description: "Spacious interior view",
+      url: "/images/cafe/pexels-fotios-photos-776538.jpg",
     },
     {
       id: 12,
-      category: "food",
-      title: "Fresh Pastries",
-      description: "Daily baked goods",
-      url: "https://images.unsplash.com/photo-1555507031-1e8e629d985b?w=800&h=600&fit=crop&auto=format",
+      category: "interior",
+      title: "Coffee Bar Counter",
+      description: "Professional espresso machine setup",
+      url: "/images/cafe/pexels-fotios-photos-2193600.jpg",
     },
     {
       id: 13,
-      category: "spots",
-      title: "Window Seat",
-      description: "Perfect for people watching",
-      url: "https://images.unsplash.com/photo-1564890369478-c89ca6d9cda9?w=800&h=600&fit=crop&auto=format",
+      category: "interior",
+      title: "Wooden Furniture",
+      description: "Rustic table details",
+      url: "/images/cafe/pexels-haleyve-3968056.jpg",
     },
     {
       id: 14,
-      category: "desserts",
-      title: "Tiramisu",
-      description: "Classic Italian dessert",
-      url: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&h=600&fit=crop&auto=format",
+      category: "interior",
+      title: "Modern Decor",
+      description: "Contemporary design elements",
+      url: "/images/cafe/pexels-fineasanton-2993065.jpg",
     },
     {
       id: 15,
+      category: "interior",
+      title: "Cozy Corner",
+      description: "Comfortable armchairs",
+      url: "/images/cafe/pexels-mehmet-34885414.jpg",
+    },
+
+    // Ambience (5 images) - Lighting, Mood, Blur
+    {
+      id: 16,
       category: "ambience",
-      title: "Morning Vibes",
-      description: "Start your day right",
-      url: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800&h=600&fit=crop&auto=format",
+      title: "Warm Lighting",
+      description: "Soft evening glow",
+      url: "/images/cafe/tony-lee-8IKf54pc3qk-unsplash.jpg",
+    },
+    {
+      id: 17,
+      category: "ambience",
+      title: "Cafe Atmosphere",
+      description: "Busy and lively vibes",
+      url: "/images/cafe/pexels-abeysaksham-31774132.jpg",
+    },
+    {
+      id: 18,
+      category: "ambience",
+      title: "Rainy Day Mood",
+      description: "Cozy shelter from rain",
+      url: "/images/cafe/pexels-apgpotr-683039.jpg",
+    },
+    {
+      id: 19,
+      category: "ambience",
+      title: "Sunlight Shadows",
+      description: "Natural light play",
+      url: "/images/cafe/roman-bozhko-OXXsAafHDeo-unsplash.jpg",
+    },
+    {
+      id: 20,
+      category: "ambience",
+      title: "Evening Vibes",
+      description: "Romantic night setting",
+      url: "/images/cafe/pexels-nida-kurt-5079840-8765830.jpg",
+    },
+
+    // Photo Spots (5 images) - Specific Instagrammable Locations
+    {
+      id: 21,
+      category: "spots",
+      title: "The Window Seat",
+      description: "Best view in the house",
+      url: "/images/cafe/pexels-daven-hsu-5766928-34791601.jpg",
+    },
+    {
+      id: 22,
+      category: "spots",
+      title: "Green Wall",
+      description: "Vertical garden backdrop",
+      url: "/images/cafe/celine-ylmz-L2ost-ZEmK8-unsplash.jpg",
+    },
+    {
+      id: 23,
+      category: "spots",
+      title: "Outdoor Patio",
+      description: "Sunny terrace spot",
+      url: "/images/cafe/pexels-abeysaksham-31774133.jpg",
+    },
+    {
+      id: 24,
+      category: "spots",
+      title: "Neon Sign Wall",
+      description: "Popular photo background",
+      url: "/images/cafe/kris-atomic-3b2tADGAWnU-unsplash.jpg",
+    },
+    {
+      id: 25,
+      category: "spots",
+      title: "Vintage Mirror",
+      description: "Perfect for selfies",
+      url: "/images/cafe/tomas-jasovsky-d5SZqLkpIrY-unsplash.jpg",
     },
   ];
 
-  const filteredImages = selectedCategory === "all" 
-    ? galleryImages 
+  const filteredImages = selectedCategory === "all"
+    ? galleryImages
     : galleryImages.filter(img => img.category === selectedCategory);
 
+  const handleCategoryChange = (categoryId: string) => {
+    setSelectedCategory(categoryId);
+    // Scroll to gallery section smoothly
+    galleryRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   const toggleLike = (imageId: number) => {
-    setLikedImages(prev => 
-      prev.includes(imageId) 
+    setLikedImages(prev =>
+      prev.includes(imageId)
         ? prev.filter(id => id !== imageId)
         : [...prev, imageId]
     );
@@ -137,19 +223,19 @@ const Gallery = () => {
   return (
     <main className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-24 md:py-32 gradient-warm relative overflow-hidden">
+      <section className="py-24 md:py-32 bg-brown-lighter relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 right-10 w-96 h-96 bg-coffee rounded-full blur-3xl animate-pulse" />
+          <div className="absolute top-20 right-10 w-96 h-96 bg-brown rounded-full blur-3xl animate-pulse" />
         </div>
         <div className="container mx-auto px-6 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-coffee font-medium mb-4 tracking-wider uppercase text-sm animate-fade-in">
+            <p className="text-brown font-medium mb-4 tracking-wider uppercase text-sm animate-fade-in">
               Visual Journey
             </p>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-8 animate-fade-in">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-8 animate-fade-in text-brown">
               Gallery
             </h1>
-            <div className="w-24 h-1 gradient-brown mx-auto rounded-full mb-10 animate-fade-in" />
+            <div className="w-24 h-1 bg-brown mx-auto rounded-full mb-10 animate-fade-in" />
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed animate-fade-in">
               Explore our beautiful spaces and culinary creations through these captured moments
             </p>
@@ -158,7 +244,7 @@ const Gallery = () => {
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 bg-background sticky top-20 z-40 border-b border-border">
+      <section className="py-8 bg-background sticky top-20 z-40 border-b border-brown/20">
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => {
@@ -166,12 +252,11 @@ const Gallery = () => {
               return (
                 <button
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center gap-2 px-6 py-3 rounded-full transition-premium ${
-                    selectedCategory === category.id
-                      ? "gradient-brown text-white shadow-glow"
-                      : "bg-muted text-muted-foreground hover:bg-brown hover:text-white"
-                  }`}
+                  onClick={() => handleCategoryChange(category.id)}
+                  className={`flex items-center gap-2 px-6 py-3 rounded-full transition-normal ${selectedCategory === category.id
+                    ? "bg-brown text-white shadow-soft"
+                    : "bg-muted text-muted-foreground hover:bg-brown hover:text-white"
+                    }`}
                 >
                   <Icon className="w-4 h-4" />
                   <span className="font-medium">{category.name}</span>
@@ -183,25 +268,27 @@ const Gallery = () => {
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-16 bg-background">
+      <section ref={galleryRef} className="py-16 bg-background">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredImages.map((image, index) => (
               <div
                 key={image.id}
-                className="group relative overflow-hidden rounded-2xl shadow-card hover:shadow-premium transition-premium"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="group relative overflow-hidden rounded-2xl shadow-card hover:shadow-hover"
               >
                 {/* Image */}
-                <div className="aspect-w-4 aspect-h-3 relative h-80">
+                <div className="relative h-80">
                   <img
                     src={image.url}
                     alt={image.title}
-                    className="w-full h-full object-cover transition-premium group-hover:scale-110"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover"
+                    style={{ willChange: 'transform' }}
                   />
-                  
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-premium">
+
+                  {/* Overlay - only appears on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                       <h3 className="text-xl font-serif font-bold mb-2">{image.title}</h3>
                       <p className="text-sm opacity-90">{image.description}</p>
@@ -211,15 +298,14 @@ const Gallery = () => {
                   {/* Like Button */}
                   <button
                     onClick={() => toggleLike(image.id)}
-                    className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-premium hover:scale-110"
+                    className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
                     aria-label="Like image"
                   >
                     <Heart
-                      className={`w-5 h-5 ${
-                        likedImages.includes(image.id)
-                          ? "fill-current text-red-500"
-                          : ""
-                      }`}
+                      className={`w-5 h-5 ${likedImages.includes(image.id)
+                        ? "fill-current text-red-500"
+                        : ""
+                        }`}
                     />
                   </button>
                 </div>
@@ -244,10 +330,10 @@ const Gallery = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-24 gradient-warm">
+      <section className="py-24 bg-brown-lighter">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-brown">
               Visit Us and Create Your Own Memories
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
@@ -256,14 +342,14 @@ const Gallery = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/visit"
-                className="inline-flex items-center justify-center px-8 py-3 gradient-brown text-white rounded-xl font-medium hover:shadow-glow transition-premium hover:scale-105"
+                className="inline-flex items-center justify-center px-8 py-3 bg-brown text-white rounded-lg font-medium hover:shadow-hover transition-normal hover:scale-105"
               >
                 <MapPin className="w-5 h-5 mr-2" />
                 Get Directions
               </a>
               <a
                 href="/menu"
-                className="inline-flex items-center justify-center px-8 py-3 bg-coffee text-white rounded-xl font-medium hover:shadow-glow transition-premium hover:scale-105"
+                className="inline-flex items-center justify-center px-8 py-3 bg-brown text-white rounded-lg font-medium hover:shadow-hover transition-normal hover:scale-105"
               >
                 <Utensils className="w-5 h-5 mr-2" />
                 View Menu
