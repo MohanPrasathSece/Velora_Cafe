@@ -206,4 +206,14 @@
   .hover-lift {
     @apply transition-normal hover:-translate-y-0.5 hover:shadow-hover;
   }
+
+  /* Hide scrollbar */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }

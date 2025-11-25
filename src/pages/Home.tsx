@@ -11,9 +11,10 @@ const Home = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/cafe/pexels-mehmet-34909613.jpg"
-            alt="Premium coffee with beautiful latte art"
+            src="/images/cafe/Gemini_Generated_Image_owf0cowf0cowf0co.png"
+            alt="Velora Café - Premium cafe with stunning ambience"
             className="w-full h-full object-cover scale-105 animate-[scale_20s_ease-in-out_infinite]"
+            style={{ objectPosition: 'center 60%' }}
           />
           <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-0 bg-gradient-to-b from-brown/30 via-black/20 to-brown-dark/40" />
@@ -66,7 +67,7 @@ const Home = () => {
                 <img
                   src="/images/food/velora_latte.jpg"
                   alt="Artisanal latte with perfect latte art in white porcelain cup"
-                  className="w-full h-80 lg:h-96 object-cover group-hover:scale-110 transition-normal duration-700"
+                  className="w-full h-80 lg:h-96 object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brown/20 to-transparent opacity-0 group-hover:opacity-100 transition-normal" />
                 <div className="absolute top-4 right-4 w-14 h-14 bg-brown rounded-xl flex items-center justify-center shadow-soft group-hover:shadow-hover group-hover:scale-110 transition-normal">
@@ -86,7 +87,7 @@ const Home = () => {
                 <img
                   src="/images/food/artesian_pastries.jpg"
                   alt="Artisanal chocolate croissants and pastries on marble countertop"
-                  className="w-full h-80 lg:h-96 object-cover group-hover:scale-110 transition-vintage duration-700 sepia-filter"
+                  className="w-full h-80 lg:h-96 object-cover group-hover:scale-110 transition-transform duration-700 sepia-filter"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-antique-gold/20 to-transparent opacity-0 group-hover:opacity-100 transition-vintage" />
                 <div className="absolute top-4 right-4 w-14 h-14 gradient-gold rounded flex items-center justify-center shadow-ornate group-hover:shadow-glow-gold group-hover:scale-110 transition-vintage border border-antique-gold/40">
@@ -106,7 +107,7 @@ const Home = () => {
                 <img
                   src="/images/food/speciality_drinks.jpg"
                   alt="Artisanal iced coffee with latte art and caramel drizzle"
-                  className="w-full h-80 lg:h-96 object-cover group-hover:scale-110 transition-vintage duration-700 sepia-filter"
+                  className="w-full h-80 lg:h-96 object-cover group-hover:scale-110 transition-transform duration-700 sepia-filter"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-burgundy/20 to-transparent opacity-0 group-hover:opacity-100 transition-vintage" />
                 <div className="absolute top-4 right-4 w-14 h-14 gradient-burgundy rounded flex items-center justify-center shadow-ornate group-hover:shadow-glow-gold group-hover:scale-110 transition-vintage border border-burgundy-dark/30">

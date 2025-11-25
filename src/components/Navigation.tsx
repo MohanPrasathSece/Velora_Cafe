@@ -77,49 +77,66 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden mt-6 pb-6 animate-fade-in border-t border-brown/10 pt-6">
-            <div className="flex flex-col gap-4">
-              <NavLink
-                to="/"
-                end
-                className="text-base font-medium text-muted-foreground hover:text-brown transition-normal py-2 px-4 rounded hover:bg-brown-lighter"
-                activeClassName="text-brown font-semibold bg-brown-lighter"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Home
-              </NavLink>
-              <NavLink
-                to="/heritage"
-                className="text-base font-medium text-muted-foreground hover:text-brown transition-normal py-2 px-4 rounded hover:bg-brown-lighter"
-                activeClassName="text-brown font-semibold bg-brown-lighter"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Our Story
-              </NavLink>
-              <NavLink
-                to="/menu"
-                className="text-base font-medium text-muted-foreground hover:text-brown transition-normal py-2 px-4 rounded hover:bg-brown-lighter"
-                activeClassName="text-brown font-semibold bg-brown-lighter"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Menu
-              </NavLink>
-              <NavLink
-                to="/gallery"
-                className="text-base font-medium text-muted-foreground hover:text-brown transition-normal py-2 px-4 rounded hover:bg-brown-lighter"
-                activeClassName="text-brown font-semibold bg-brown-lighter"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Gallery
-              </NavLink>
-              <NavLink
-                to="/visit"
-                className="text-base font-medium text-muted-foreground hover:text-brown transition-normal py-2 px-4 rounded hover:bg-brown-lighter"
-                activeClassName="text-brown font-semibold bg-brown-lighter"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Visit Us
-              </NavLink>
+          <div className="lg:hidden mt-6 pb-6 animate-fade-in">
+            <div className="bg-white/98 backdrop-blur-md rounded-3xl shadow-2xl p-6 border border-brown/10">
+              <div className="flex flex-col gap-3">
+                <NavLink
+                  to="/"
+                  end
+                  className="flex items-center justify-between text-base font-medium text-muted-foreground hover:text-brown transition-normal py-4 px-5 rounded-2xl hover:bg-brown-lighter"
+                  activeClassName="text-brown font-semibold bg-brown-lighter"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <span>Home</span>
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </NavLink>
+                <NavLink
+                  to="/heritage"
+                  className="flex items-center justify-between text-base font-medium text-muted-foreground hover:text-brown transition-normal py-4 px-5 rounded-2xl hover:bg-brown-lighter"
+                  activeClassName="text-brown font-semibold bg-brown-lighter"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <span>Our Story</span>
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </NavLink>
+                <NavLink
+                  to="/menu"
+                  className="flex items-center justify-between text-base font-medium text-muted-foreground hover:text-brown transition-normal py-4 px-5 rounded-2xl hover:bg-brown-lighter"
+                  activeClassName="text-brown font-semibold bg-brown-lighter"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <span>Menu</span>
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </NavLink>
+                <NavLink
+                  to="/gallery"
+                  className="flex items-center justify-between text-base font-medium text-muted-foreground hover:text-brown transition-normal py-4 px-5 rounded-2xl hover:bg-brown-lighter"
+                  activeClassName="text-brown font-semibold bg-brown-lighter"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <span>Gallery</span>
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </NavLink>
+                <NavLink
+                  to="/visit"
+                  className="flex items-center justify-between text-base font-medium text-muted-foreground hover:text-brown transition-normal py-4 px-5 rounded-2xl hover:bg-brown-lighter"
+                  activeClassName="text-brown font-semibold bg-brown-lighter"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <span>Visit Us</span>
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </NavLink>
+              </div>
             </div>
           </div>
         )}

@@ -38,7 +38,7 @@ const Heritage = () => {
                 </p>
               </div>
             </div>
-            <div className="order-1 lg:order-2 rounded-2xl overflow-hidden shadow-premium hover-lift h-64 lg:h-80">
+            <div className="order-1 lg:order-2 rounded-2xl overflow-hidden shadow-premium hover-lift h-96 lg:h-[500px]">
               <img
                 src="/images/cafe/pexels-mehmet-34885414.jpg"
                 alt="Luxury café interior with comfortable beige seating and elegant design"
@@ -49,7 +49,7 @@ const Heritage = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="rounded-2xl overflow-hidden shadow-premium hover-lift h-64 lg:h-80">
+            <div className="rounded-2xl overflow-hidden shadow-premium hover-lift h-96 lg:h-[500px]">
               <img
                 src="/images/food/velora_latte.jpg"
                 alt="Premium espresso being poured into white cup with artistic precision"
@@ -117,24 +117,39 @@ const Heritage = () => {
       {/* Founder Section */}
       <section className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-coffee font-medium mb-4 tracking-wider uppercase text-sm">Leadership</p>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">Meet Our Founder</h2>
+          <div className="max-w-4xl mx-auto">
+            <p className="text-coffee font-medium mb-4 tracking-wider uppercase text-sm text-center">Leadership</p>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-center">Meet Our Founder</h2>
             <div className="w-24 h-1 gradient-brown mx-auto rounded-full mb-12" />
-            <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
-              <p>
-                <span className="font-serif text-3xl text-brown block mb-2">Isabella Martinez</span>
-                <span className="text-coffee text-sm tracking-wider uppercase">Founder & Creative Director</span>
-              </p>
-              <p className="mt-6">
-                Isabella brings over 15 years of experience in the specialty coffee industry. Her journey began as a
-                barista in Barcelona, where she fell in love with the art and science of coffee making.
-              </p>
-              <p>
-                After training with master roasters across Europe and Asia, Isabella returned with a vision to create a
-                café that embodied the perfect balance of luxury, quality, and warmth. Today, she continues to oversee
-                every aspect of Velora's operations, ensuring that each guest receives an exceptional experience.
-              </p>
+
+            {/* Founder Image and Info */}
+            <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center md:items-start">
+              {/* Founder Portrait */}
+              <div className="w-80 h-80 md:w-96 md:h-96 flex-shrink-0">
+                <img
+                  src="/images/founder-isabella.jpg"
+                  alt="Isabella Martinez, Founder & Creative Director"
+                  className="w-full h-full object-cover rounded-2xl shadow-premium"
+                  loading="lazy"
+                />
+              </div>
+
+              {/* Founder Bio */}
+              <div className="flex-1 space-y-6 text-muted-foreground leading-relaxed text-lg">
+                <div className="text-center md:text-left">
+                  <h3 className="font-serif text-3xl text-brown mb-2">Isabella Martinez</h3>
+                  <p className="text-coffee text-sm tracking-wider uppercase">Founder & Creative Director</p>
+                </div>
+                <p>
+                  Isabella brings over 15 years of experience in the specialty coffee industry. Her journey began as a
+                  barista in Barcelona, where she fell in love with the art and science of coffee making.
+                </p>
+                <p>
+                  After training with master roasters across Europe and Asia, Isabella returned with a vision to create a
+                  café that embodied the perfect balance of luxury, quality, and warmth. Today, she continues to oversee
+                  every aspect of Velora's operations, ensuring that each guest receives an exceptional experience.
+                </p>
+              </div>
             </div>
           </div>
         </div>
