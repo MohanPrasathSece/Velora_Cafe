@@ -6,12 +6,17 @@ import { Button } from "./ui/button";
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const handleNavClick = () => {
+    setMobileMenuOpen(false);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/98 backdrop-blur-lg border-b border-brown/20 shadow-soft">
       <div className="container mx-auto px-6 py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <NavLink to="/" className="flex items-center gap-3 group" onClick={() => setMobileMenuOpen(false)}>
+          <NavLink to="/" className="flex items-center gap-3 group" onClick={handleNavClick}>
             <div className="w-12 h-12 bg-brown rounded-lg flex items-center justify-center shadow-soft transition-normal group-hover:shadow-hover group-hover:scale-105">
               <Coffee className="w-6 h-6 text-white" />
             </div>
@@ -27,6 +32,7 @@ const Navigation = () => {
               end
               className="text-base font-medium text-muted-foreground hover:text-brown transition-normal relative group"
               activeClassName="text-brown font-semibold"
+              onClick={() => window.scrollTo(0, 0)}
             >
               Home
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brown group-hover:w-full transition-normal" />
@@ -35,6 +41,7 @@ const Navigation = () => {
               to="/heritage"
               className="text-base font-medium text-muted-foreground hover:text-brown transition-normal relative group"
               activeClassName="text-brown font-semibold"
+              onClick={() => window.scrollTo(0, 0)}
             >
               Our Story
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brown group-hover:w-full transition-normal" />
@@ -43,6 +50,7 @@ const Navigation = () => {
               to="/menu"
               className="text-base font-medium text-muted-foreground hover:text-brown transition-normal relative group"
               activeClassName="text-brown font-semibold"
+              onClick={() => window.scrollTo(0, 0)}
             >
               Menu
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brown group-hover:w-full transition-normal" />
@@ -51,6 +59,7 @@ const Navigation = () => {
               to="/gallery"
               className="text-base font-medium text-muted-foreground hover:text-brown transition-normal relative group"
               activeClassName="text-brown font-semibold"
+              onClick={() => window.scrollTo(0, 0)}
             >
               Gallery
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brown group-hover:w-full transition-normal" />
@@ -59,6 +68,7 @@ const Navigation = () => {
               to="/visit"
               className="text-base font-medium text-muted-foreground hover:text-brown transition-normal relative group"
               activeClassName="text-brown font-semibold"
+              onClick={() => window.scrollTo(0, 0)}
             >
               Visit Us
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brown group-hover:w-full transition-normal" />
@@ -85,7 +95,7 @@ const Navigation = () => {
                   end
                   className="flex items-center justify-between text-base font-medium text-muted-foreground hover:text-brown transition-normal py-4 px-5 rounded-2xl hover:bg-brown-lighter"
                   activeClassName="text-brown font-semibold bg-brown-lighter"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={handleNavClick}
                 >
                   <span>Home</span>
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -96,7 +106,7 @@ const Navigation = () => {
                   to="/heritage"
                   className="flex items-center justify-between text-base font-medium text-muted-foreground hover:text-brown transition-normal py-4 px-5 rounded-2xl hover:bg-brown-lighter"
                   activeClassName="text-brown font-semibold bg-brown-lighter"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={handleNavClick}
                 >
                   <span>Our Story</span>
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -107,7 +117,7 @@ const Navigation = () => {
                   to="/menu"
                   className="flex items-center justify-between text-base font-medium text-muted-foreground hover:text-brown transition-normal py-4 px-5 rounded-2xl hover:bg-brown-lighter"
                   activeClassName="text-brown font-semibold bg-brown-lighter"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={handleNavClick}
                 >
                   <span>Menu</span>
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -118,7 +128,7 @@ const Navigation = () => {
                   to="/gallery"
                   className="flex items-center justify-between text-base font-medium text-muted-foreground hover:text-brown transition-normal py-4 px-5 rounded-2xl hover:bg-brown-lighter"
                   activeClassName="text-brown font-semibold bg-brown-lighter"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={handleNavClick}
                 >
                   <span>Gallery</span>
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -129,7 +139,7 @@ const Navigation = () => {
                   to="/visit"
                   className="flex items-center justify-between text-base font-medium text-muted-foreground hover:text-brown transition-normal py-4 px-5 rounded-2xl hover:bg-brown-lighter"
                   activeClassName="text-brown font-semibold bg-brown-lighter"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={handleNavClick}
                 >
                   <span>Visit Us</span>
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

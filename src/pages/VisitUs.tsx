@@ -197,7 +197,7 @@ const VisitUs = () => {
           <div className="max-w-7xl mx-auto">
             <div className="bg-white rounded-2xl overflow-hidden shadow-card h-96 md:h-[500px] border border-brown/20">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.682469257763!2d73.7594923148511!3d15.543069089208124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDMyJzM1LjAiTiA3M8KwNDUnNDIuMiJF!5e0!3m2!1sen!2sin!4v1630000000000!5m2!1sen!2sin"
+                src="https://maps.google.com/maps?q=15.54845898920438,73.7536283148512&z=15&output=embed&markers=color:red%7C15.54845898920438,73.7536283148512"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

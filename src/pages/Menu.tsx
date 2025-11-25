@@ -192,7 +192,6 @@ const Menu = () => {
                     <h3 className="text-xl lg:text-2xl font-serif font-semibold group-hover:text-burgundy transition-elegant">
                       {item.name}
                     </h3>
-                    <span className="text-burgundy font-bold text-xl">{item.price}</span>
                   </div>
                   <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                 </div>
@@ -236,7 +235,6 @@ const Menu = () => {
                     <h3 className="text-xl lg:text-2xl font-serif font-semibold group-hover:text-coffee transition-smooth">
                       {item.name}
                     </h3>
-                    <span className="text-coffee font-bold text-xl">{item.price}</span>
                   </div>
                   <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                 </div>
@@ -280,7 +278,6 @@ const Menu = () => {
                     <h3 className="text-xl lg:text-2xl font-serif font-semibold group-hover:text-brown transition-smooth">
                       {item.name}
                     </h3>
-                    <span className="text-brown font-bold text-xl">{item.price}</span>
                   </div>
                   <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                 </div>
@@ -324,7 +321,6 @@ const Menu = () => {
                     <h3 className="text-xl lg:text-2xl font-serif font-semibold group-hover:text-brown transition-smooth">
                       {item.name}
                     </h3>
-                    <span className="text-brown font-bold text-xl">{item.price}</span>
                   </div>
                   <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                 </div>
@@ -368,7 +364,6 @@ const Menu = () => {
                     <h3 className="text-xl lg:text-2xl font-serif font-semibold group-hover:text-coffee transition-smooth">
                       {item.name}
                     </h3>
-                    <span className="text-coffee font-bold text-xl">{item.price}</span>
                   </div>
                   <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                 </div>

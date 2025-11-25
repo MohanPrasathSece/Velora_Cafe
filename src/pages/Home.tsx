@@ -67,12 +67,10 @@ const Home = () => {
                 <img
                   src="/images/food/velora_latte.jpg"
                   alt="Artisanal latte with perfect latte art in white porcelain cup"
+                  loading="lazy"
                   className="w-full h-80 lg:h-96 object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brown/20 to-transparent opacity-0 group-hover:opacity-100 transition-normal" />
-                <div className="absolute top-4 right-4 w-14 h-14 bg-brown rounded-xl flex items-center justify-center shadow-soft group-hover:shadow-hover group-hover:scale-110 transition-normal">
-                  <Coffee className="w-7 h-7 text-white" />
-                </div>
               </div>
               <h3 className="text-2xl lg:text-3xl font-serif font-semibold mb-3 group-hover:text-brown transition-normal">
                 Signature Latte
@@ -87,12 +85,10 @@ const Home = () => {
                 <img
                   src="/images/food/artesian_pastries.jpg"
                   alt="Artisanal chocolate croissants and pastries on marble countertop"
+                  loading="lazy"
                   className="w-full h-80 lg:h-96 object-cover group-hover:scale-110 transition-transform duration-700 sepia-filter"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-antique-gold/20 to-transparent opacity-0 group-hover:opacity-100 transition-vintage" />
-                <div className="absolute top-4 right-4 w-14 h-14 gradient-gold rounded flex items-center justify-center shadow-ornate group-hover:shadow-glow-gold group-hover:scale-110 transition-vintage border border-antique-gold/40">
-                  <Heart className="w-7 h-7 text-sepia" />
-                </div>
               </div>
               <h3 className="text-2xl lg:text-3xl font-serif font-semibold mb-3 group-hover:text-antique-gold transition-elegant">
                 Artisan Pastries
@@ -107,12 +103,10 @@ const Home = () => {
                 <img
                   src="/images/food/speciality_drinks.jpg"
                   alt="Artisanal iced coffee with latte art and caramel drizzle"
+                  loading="lazy"
                   className="w-full h-80 lg:h-96 object-cover group-hover:scale-110 transition-transform duration-700 sepia-filter"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-burgundy/20 to-transparent opacity-0 group-hover:opacity-100 transition-vintage" />
-                <div className="absolute top-4 right-4 w-14 h-14 gradient-burgundy rounded flex items-center justify-center shadow-ornate group-hover:shadow-glow-gold group-hover:scale-110 transition-vintage border border-burgundy-dark/30">
-                  <Star className="w-7 h-7 text-primary-foreground" />
-                </div>
               </div>
               <h3 className="text-2xl lg:text-3xl font-serif font-semibold mb-3 group-hover:text-burgundy transition-elegant">
                 Specialty Drinks
