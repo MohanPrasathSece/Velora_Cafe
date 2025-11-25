@@ -21,7 +21,7 @@ const Home = () => {
         </div>
 
         <div className="relative z-10 text-center px-4 md:px-6 max-w-4xl mx-auto">
-          <div className="inline-block mb-6 px-6 py-2 bg-white/95 backdrop-blur-sm rounded-lg border-2 border-brown/30 animate-fade-in shadow-soft">
+          <div className="hidden md:inline-block mb-6 px-6 py-2 bg-white/95 backdrop-blur-sm rounded-lg border-2 border-brown/30 animate-fade-in shadow-soft">
             <p className="text-xs md:text-sm font-medium text-brown flex items-center gap-2">
               <Sparkles className="w-4 h-4" />
               Premium Coffee Experience
@@ -34,11 +34,11 @@ const Home = () => {
             Experience the finest selection of specialty coffee and artisanal pastries in an atmosphere of refined elegance
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-            <Button variant="default" size="lg" onClick={() => navigate("/menu")} className="group">
+            <Button variant="default" size="lg" onClick={() => navigate("/menu")} className="group px-6 md:px-8">
               Explore Menu
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="lg" onClick={() => navigate("/heritage")}>
+            <Button variant="outline" size="lg" onClick={() => navigate("/heritage")} className="px-6 md:px-8">
               Our Story
             </Button>
           </div>

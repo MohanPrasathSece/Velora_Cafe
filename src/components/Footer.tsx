@@ -76,6 +76,7 @@ const Footer = () => {
 
         <div className="pt-8 border-t border-brown/20 text-center text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Velora Café. All rights reserved.</p>
+          <p className="text-sm mt-2 opacity-75">Created by Zyra Digitals</p>
         </div>
       </div>
     </footer>

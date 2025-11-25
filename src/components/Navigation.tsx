@@ -8,7 +8,7 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/98 backdrop-blur-lg border-b border-brown/20 shadow-soft">
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-6 py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <NavLink to="/" className="flex items-center gap-3 group" onClick={() => setMobileMenuOpen(false)}>
@@ -78,7 +78,7 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="lg:hidden mt-6 pb-6 animate-fade-in">
-            <div className="bg-white/98 backdrop-blur-md rounded-3xl shadow-2xl p-6 border border-brown/10">
+            <div className="bg-white/80 backdrop-blur-md rounded-3xl shadow-2xl p-6 border border-brown/10">
               <div className="flex flex-col gap-3">
                 <NavLink
                   to="/"
