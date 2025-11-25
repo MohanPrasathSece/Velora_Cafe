@@ -1,21 +1,45 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Coffee, Heart, Star, Sparkles } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const Home = () => {
   const navigate = useNavigate();
+
+  // Background images to rotate
+  const backgroundImages = [
+    "/images/cafe/kris-atomic-3b2tADGAWnU-unsplash.jpg",
+    "/images/cafe/pexels-leeloothefirst-4678923.jpg"
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Rotate background image every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % backgroundImages.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src="/images/cafe/Gemini_Generated_Image_owf0cowf0cowf0co.jpg"
-            alt="Velora Café - Premium cafe with stunning ambience"
-            className="w-full h-full object-cover scale-105 animate-[scale_20s_ease-in-out_infinite]"
-            style={{ objectPosition: 'center 40%' }}
-          />
+          {backgroundImages.map((image, index) => (
+            <img
+              key={image}
+              src={image}
+              alt="Velora Café - Premium cafe with stunning ambience"
+              className={`absolute inset-0 w-full h-full object-cover scale-105 animate-[scale_20s_ease-in-out_infinite] transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                }`}
+              style={{
+                objectPosition: image.includes('pexels-leeloothefirst') ? 'center 60%' : 'center 40%'
+              }}
+            />
+          ))}
           <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-0 bg-gradient-to-b from-brown/30 via-black/20 to-brown-dark/40" />
         </div>
