@@ -115,40 +115,67 @@ const Heritage = () => {
       </section>
 
       {/* Founder Section */}
-      <section className="py-24 md:py-32 bg-background">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-coffee font-medium mb-4 tracking-wider uppercase text-sm text-center">Leadership</p>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-center">Meet Our Founder</h2>
-            <div className="w-24 h-1 gradient-brown mx-auto rounded-full mb-12" />
+      <section className="py-24 md:py-32 bg-brown-lighter/20 relative overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-brown/5 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-brown/5 rounded-full blur-3xl" />
 
-            {/* Founder Image and Info */}
-            <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center md:items-start">
-              {/* Founder Portrait */}
-              <div className="w-80 h-80 md:w-96 md:h-96 flex-shrink-0">
-                <img
-                  src="/images/founder-isabella.jpg"
-                  alt="Isabella Martinez, Founder & Creative Director"
-                  className="w-full h-full object-cover rounded-2xl shadow-premium"
-                  loading="lazy"
-                />
+        <div className="container mx-auto px-6 relative">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+              {/* Image Section - Spans 5 columns */}
+              <div className="lg:col-span-5 relative">
+                <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] group">
+                  <img
+                    src="/images/founder-isabella.jpg"
+                    alt="Isabella Martinez, Founder & Creative Director"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  {/* Overlay Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-60" />
+
+                  {/* Name on Image (Mobile only) */}
+                  <div className="absolute bottom-6 left-6 text-white lg:hidden">
+                    <h3 className="font-serif text-2xl font-bold">Isabella Martinez</h3>
+                    <p className="text-white/90 text-sm tracking-wider uppercase mt-1">Founder</p>
+                  </div>
+                </div>
+
+                {/* Decorative Border Box */}
+                <div className="absolute -top-4 -left-4 w-full h-full border-2 border-brown/20 rounded-2xl -z-0 hidden lg:block" />
               </div>
 
-              {/* Founder Bio */}
-              <div className="flex-1 space-y-6 text-muted-foreground leading-relaxed text-lg">
-                <div className="text-center md:text-left">
-                  <h3 className="font-serif text-3xl text-brown mb-2">Isabella Martinez</h3>
-                  <p className="text-coffee text-sm tracking-wider uppercase">Founder & Creative Director</p>
+              {/* Content Section - Spans 7 columns */}
+              <div className="lg:col-span-7 lg:pl-12">
+                <div className="space-y-8">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-4">
+                      <span className="h-px w-12 bg-brown"></span>
+                      <span className="text-brown font-medium tracking-widest uppercase text-sm">Leadership</span>
+                    </div>
+                    <h2 className="text-4xl md:text-6xl font-serif font-bold text-foreground leading-tight">
+                      Crafting Moments <br />
+                      <span className="text-brown italic">of Perfection</span>
+                    </h2>
+                  </div>
+
+                  <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
+                    <p>
+                      Isabella brings over 15 years of global experience to Velora. Her journey began in the bustling cafés of Barcelona and took her to the coffee plantations of Colombia, where she developed a deep reverence for the bean.
+                    </p>
+                    <p>
+                      Today, she personally oversees our roasting profiles and menu curation, ensuring that Velora Café remains a beacon of culinary excellence and warm hospitality.
+                    </p>
+                  </div>
+
+                  {/* Signature / Name Block (Desktop) */}
+                  <div className="pt-6 hidden lg:block">
+                    <h3 className="font-serif text-3xl text-brown">Isabella Martinez</h3>
+                    <p className="text-coffee text-sm tracking-wider uppercase mt-1">Founder & Creative Director</p>
+                  </div>
                 </div>
-                <p>
-                  Isabella brings over 15 years of experience in the specialty coffee industry. Her journey began as a
-                  barista in Barcelona, where she fell in love with the art and science of coffee making.
-                </p>
-                <p>
-                  After training with master roasters across Europe and Asia, Isabella returned with a vision to create a
-                  café that embodied the perfect balance of luxury, quality, and warmth. Today, she continues to oversee
-                  every aspect of Velora's operations, ensuring that each guest receives an exceptional experience.
-                </p>
               </div>
             </div>
           </div>

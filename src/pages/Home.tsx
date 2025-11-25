@@ -14,7 +14,7 @@ const Home = () => {
             src="/images/cafe/Gemini_Generated_Image_owf0cowf0cowf0co.jpg"
             alt="Velora Café - Premium cafe with stunning ambience"
             className="w-full h-full object-cover scale-105 animate-[scale_20s_ease-in-out_infinite]"
-            style={{ objectPosition: 'center top' }}
+            style={{ objectPosition: 'center 40%' }}
           />
           <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-0 bg-gradient-to-b from-brown/30 via-black/20 to-brown-dark/40" />
